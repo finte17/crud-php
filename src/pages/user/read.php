@@ -10,7 +10,7 @@ $users = readUserAction($conn);
 ?>
 <div class="container">
 	<div class="row">
-		<a href="../../../"><h1>Users - Read</h1></a>
+		<a href="../../../"><h1>Lista de usuarios</h1></a>
 		<a class="btn btn-success text-white" href="./create.php">New</a>
 	</div>
 	<div class="row flex-center">
@@ -19,9 +19,9 @@ $users = readUserAction($conn);
 
 	<table class="table-users">
 		<tr>
-			<th>NAME</th>
-			<th>EMAIL</th>
-			<th>PHONE</th>
+			<th>NOME</th>
+			<th>E-MAIL</th>
+			<th>TELEFONE</th>
 		</tr>
 		<?php foreach($users as $row): ?>
 		<tr>
@@ -29,10 +29,10 @@ $users = readUserAction($conn);
 			<td class="user-email"><?=htmlspecialchars($row['email'])?></td>
 			<td class="user-phone"><?=htmlspecialchars($row['phone'])?></td>
 			<td>
-				<a class="btn btn-primary text-white" href="./edit.php?id=<?=$row['id']?>">Edit</a>
+				<a class="btn btn-primary text-white" href="./edit.php?id=<?=$row['id']?>">Editar</a>
 			</td>
 			<td>
-				<a class="btn btn-danger text-white" href="./delete.php?id=<?=$row['id']?>">Remove</a>
+				<a class="btn btn-danger text-white" href="./delete.php?id=<?=$row['id']?>">Remover</a>
 			</td>
 		</tr>
 		<?php endforeach; ?>
